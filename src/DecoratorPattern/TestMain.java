@@ -11,11 +11,11 @@ public class TestMain {
         //定义初始化方法
         MediaPlayer defaultPlay = new DefaultPlay();
         //相当于告知增强哪个对象的哪个方法
-        MediaPlayer flvPlayer = new AddDecorator(defaultPlay);
+        MediaPlayer addPlayer = new AddDecorator(defaultPlay);
         //未装饰增强
         defaultPlay.play();
         System.out.println("--------------增强后--------------");
         //装饰增强后
-        flvPlayer.play();
+        addPlayer.play();
     }
 }
