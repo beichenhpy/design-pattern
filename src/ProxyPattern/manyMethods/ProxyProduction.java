@@ -1,5 +1,6 @@
 package ProxyPattern.manyMethods;
 
+
 /**
  * @author beichenhpy
  * @version 1.0
@@ -8,16 +9,15 @@ package ProxyPattern.manyMethods;
  */
 public class ProxyProduction extends AbstractProduction{
 
-    private final Integer price;
+    private final Production production;
 
     public ProxyProduction(Integer price){
-        this.price = price;
+        production = new RealProduction(price);
     }
 
     @Override
     public void sell() {
         System.out.println("代理包装了商品");
-        Production production = new RealProduction(price);
         production.sell();
     }
 }

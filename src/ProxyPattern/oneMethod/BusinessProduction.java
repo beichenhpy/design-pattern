@@ -7,20 +7,15 @@ package ProxyPattern.oneMethod;
  * @since 2021/2/5 9:05
  */
 public class BusinessProduction implements Production{
-    /**
-     * 商人定义的售价
-     */
-    private final Integer price;
+    private final Production production;
 
     public BusinessProduction(Integer price){
-        this.price = price;
+        production = new PersonalProduction(price);
     }
     @Override
     public void sell() {
         //包装
         System.out.println("商人包装了商品");
-        //调用真正的sell
-        Production production = new PersonalProduction(price);
         production.sell();
     }
 }
