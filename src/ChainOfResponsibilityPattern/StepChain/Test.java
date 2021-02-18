@@ -11,6 +11,6 @@ public class Test {
         Handler handler = new HandlerOne();
         Handler handler1 = new HandlerTwo();
         handler.setNextHandler(handler1);
-        handler.handle(new User("fo","foo12"));
+        handler.doHandler(new User("foo","foo123"));
     }
 }
