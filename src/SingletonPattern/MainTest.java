@@ -8,9 +8,9 @@ package SingletonPattern;
  */
 public class MainTest {
     public static void main(String[] args) {
-        HungrySingleObject hungrySingleObject = HungrySingleObject.getInstance();
-        hungrySingleObject.print();
-        LazySingleObject lazySingleObject = LazySingleObject.getInstanceUnsafe();
-        lazySingleObject.print();
+        InnerSingleObject instance = InnerSingleObject.getInstance();
+        InnerSingleObject instance1 = InnerSingleObject.getInstance();
+        System.out.println(instance1);
+        System.out.println(instance);
     }
 }

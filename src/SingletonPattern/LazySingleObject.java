@@ -22,7 +22,7 @@ public class LazySingleObject {
         return instance;
     }
     /**
-     * 线程安全
+     * 线程安全 但是比较慢
      * @return 对象
      */
     public static synchronized LazySingleObject getInstanceSafe() {
@@ -31,6 +31,7 @@ public class LazySingleObject {
         }
         return instance;
     }
+
 
     public void print(){
         System.out.println("我是懒汉模式生成的单例对象");
